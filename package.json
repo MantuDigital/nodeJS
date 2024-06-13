@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/MantuDigital/nodeJS/issues"
   },
-  "homepage": "https://github.com/MantuDigital/nodeJS#readme"
+  "homepage": "https://github.com/MantuDigital/nodeJS#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.3"
+  }
 }
