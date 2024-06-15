@@ -19,5 +19,9 @@
   "homepage": "https://github.com/MantuDigital/nodeJS#readme",
   "devDependencies": {
     "nodemon": "^3.1.3"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.19.2"
   }
 }

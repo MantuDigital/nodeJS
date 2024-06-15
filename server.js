@@ -1,15 +1,17 @@
-const http = require('http');
+const express = require('express');
+const path = require('path');
+const app = express();
+const port = 8000;
 
-const host = 'localhost';
-const port = 8000; 
+app.use(express.static(path.join(__dirname, 'public')));
+app.set('view engine', 'ejs');
 
-const requestListener = function (req, res) {
-  res.writeHead(200, { 'Content-Type': 'text/html' });
-  res.write("<h1> Hello,Web developers1");
-  res.end();
-};
+app.get('/', (req, res) => {
+  res.render('home.ejs');
+})
 
-const server = http.createServer(requestListener);
-server.listen(port, host, () => {
-  console.log(`Server is running on http://${host}:${port}`);
-});
+app.get('/about', (req, res) => {
+  res.render('home.ejs');
+})
+
+app.listen(port);
